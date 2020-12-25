@@ -1,10 +1,13 @@
 //Outside Modules
 var admin = require("firebase-admin");
-var serviceAccount = require("/Users/matthewmcneal/Documents/PatchNotesServer/patchnotes-3c4dd-firebase-adminsdk-73rqy-6ddf7dc9a0.json");
+var serviceAccount = require("/home/matthew/Documents/PatchNotesServer/patchnotes-3c4dd-firebase-adminsdk-73rqy-6ddf7dc9a0.json");
 var sys = require("util");
 var schedule = require('node-schedule');
 const driver = require('selenium-webdriver');
-
+var firefox = require('selenium-webdriver/firefox');
+var options = new firefox.Options();
+options.addArguments("-headless");
+module.exports.options = options;
 //Files
 var send = require('./send.js');
 var Hearthstone = require('./Hearthstone.js');

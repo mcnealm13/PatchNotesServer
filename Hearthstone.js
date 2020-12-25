@@ -5,7 +5,7 @@ parameters: none
 description: Scrape Hearthstone Patchnotes and return a results.
 -----------------------------------------------------------*/
 async function Hearthstone() {
-  let driver = new index.driver.Builder().forBrowser('safari').build();
+  let driver = new index.driver.Builder().forBrowser('firefox').setFirefoxOptions(index.options).build();
   let title = '';
   let body = '';
   let link = '';
